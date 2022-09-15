@@ -119,12 +119,10 @@ main{margin-bottom:30px;}
 .pcslide, .new_item > h2, .brand > h2, .ad > h2{display:none;}
 article img{width:100%;}
 .con{
-    margin:0px auto;
-    max-width:500px;
     display:grid;
     padding:0px 1%;
     box-sizing:border-box;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-areas:
     "item"
     "brand"
