@@ -3,7 +3,9 @@
 @media screen and (max-width:767px) {
 /* 모바일 서식 */
 header{
-
+    position:absolute;
+    width:100%;
+    z-index:1000;
 }
 .header_inner{
     width:100%;
@@ -115,8 +117,11 @@ i.fa-search{
 #toggle:checked + header .lnb{left:0px;}
 
 /* 메인콘텐츠 */
-main{margin-bottom:30px;}
-.pcslide, .new_item > h2, .brand > h2, .ad > h2{display:none;}
+main{
+    padding-top:70px;
+    margin-bottom:30px;
+}
+.pcslide, .new_item > h2, .brand > h2, .ad > h2, main > article > h2{display:none;}
 article img{width:100%;}
 .con{
     display:grid;
@@ -124,7 +129,7 @@ article img{width:100%;}
     box-sizing:border-box;
     grid-template-columns: 100%;
     grid-template-areas:
-    "item"
+    "item"s
     "brand"
     "ad"
     "store"
@@ -144,7 +149,7 @@ article img{width:100%;}
     /* background: #ffff00; */
     /* height:270px; */
 }
-article h2{display:none;}
+article > h2{display:none;}
 .brand_banner{
     display:block;
     width:100%;
@@ -153,15 +158,18 @@ article h2{display:none;}
     background-repeat: no-repeat;
     text-indent:-9999px;
 }
-.con .new_item{grid-area:item}
-.con .brand{
-    grid-area:ad;
-}
+.con .new_item{grid-area:item;}
+.con .brand{grid-area:brand;}
+.con .ad{grid-area:ad;}
+.con .notice{grid-area:notice;}
+.con .store{grid-area:store;}
+.con .news{grid-area:news;}
+
 
 .store a{
     display:block;
     background-repeat: no-repeat;
-    background-size:100%;
+    background-size:90%;
     background-position:center;
     text-indent:-9999px;
     height:190px;
@@ -186,7 +194,14 @@ footer{
 footer a{
     font-weight:500;
 }
-
+.notice li, .news li{
+    text-indent:10px;
+    min-width:320px;
+    max-width:414px;
+}
+.f_lnb{
+    padding-top:20px;
+}
 
 
 }
